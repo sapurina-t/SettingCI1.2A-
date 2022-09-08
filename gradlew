@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
-
-@sapurina-t
-netology-code
-/
-aqa-code
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-aqa-code/api-ci/rest/gradlew
-
-coursar feat(api-ci)
-Latest commit da184a6 on 20 Apr 2020
- History
- 0 contributors
-Executable File  172 lines (151 sloc)  5.18 KB
-
 #!/usr/bin/env sh
 
 ##############################################################################
@@ -103,12 +76,14 @@ if [ -n "$JAVA_HOME" ] ; then
     fi
     if [ ! -x "$JAVACMD" ] ; then
         die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
+
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
     fi
 else
     JAVACMD="java"
     which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
 fi
@@ -193,3 +168,5 @@ eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS "\"-Dorg.gradle.appname=$A
 if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
   cd "$(dirname "$0")"
 fi
+
+exec "$JAVACMD" "$@"
